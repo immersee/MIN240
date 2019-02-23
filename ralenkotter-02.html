@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html> 
+
+<title>Ralenkotter - Assignment 02</title>    
+    
+<head> </head>
+    
+<style>
+    
+    body {
+    background-color: cadetblue;
+    }
+    
+    #ground {
+    position: absolute;
+    height: 30vmin;
+    width: 80vmin;
+    top: 65vmin;
+    left: 10vmin;
+    transform: perspective(5em)rotateX(8deg);
+    z-index: 0;   
+    }
+    
+    
+    #globe {
+    position: absolute;
+    height: 65vmin;
+    width: 65vmin;
+    top: 12vmin;
+    left: 16vmin;
+    border-radius: 100%;
+    background-color: white;
+    border: 7px solid lightgray;
+    z-index: 1;
+    
+    filter: opacity(75%);
+    overflow: hidden;
+    }
+    
+    
+    #base {
+    position: absolute;
+    height: 15vmin;
+    width: 55vmin;
+    top: 70vmin;
+    left: 23vmin;
+    background-color: azure;
+    transform: perspective(3em)rotateX(5deg);
+    z-index: 2;    
+    }
+    
+    #football {
+    position: absolute; 
+    left: 5vmin;
+    top: 25vmin;
+    width: 15vmin;
+    height: 15vmin;
+    background-color: sandybrown;
+    clip-path: ellipse(50% 25%);
+    
+    animation: float 2s linear infinite;  
+    }
+    
+    
+    #phone {   
+    position: absolute;
+    background-color: black;
+    left: 27vmin;
+    top: 25vmin;
+    width: 10vmin;
+    height: 15vmin;
+    border-radius: 4%;
+    
+    animation: float 2s 1s linear infinite;   
+    }
+    
+    #basketball {
+    position: absolute;
+    left: 46vmin;
+    top: 25vmin;
+    height: 15vmin;
+    width: 15vmin;
+    background-color: darkorange;
+    border: 2px solid black;
+    border-radius: 100%;
+    
+    animation: float 2s 1.5s linear infinite;   
+    }
+    
+    
+    @keyframes float {    
+    from {transform: translateY(0px);}
+    50% {transform: translateY(-10px);}
+    to {transform: translateY(0px);}
+    }
+    
+    .changeColor {
+    background-color: hsl(45, 100%, 75%);
+    
+</style>    
+
+<body> 
+    
+<div id="globe"> 
+    <div id="football"> </div>
+    <div id="phone"> </div>
+    <div id="basketball"> </div>  
+</div>
+    
+<div id="base"> </div>
+    
+<div id="ground" class="changeColor"> </div>
+    
+</body>
+
+</html>
