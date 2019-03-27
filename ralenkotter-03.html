@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html> 
+
+<title>Ralenkotter - Game Activity</title>    
+    
+<head> </head>
+    
+<style>
+    
+    #startScreen {
+        position: absolute;
+        top: 30vh;
+        left: 10vw;
+        width: 80vw;
+        height: 40vh;
+        background-color: gray;
+        display: /* none; */ /* block */
+        
+    }
+    
+    #gameScreen {
+        position: absolute;
+        top: 5vh;
+        left: 5vw;
+        width: 90vw;
+        height: 90vh;
+        background-color: lightgray;
+        display: none; /* block */
+        
+    }
+    
+    #endScreen {
+        position: absolute;
+        top: 30vh;
+        left: 10vw;
+        width: 80vw;
+        height: 40vh;
+        background-color: black;
+        display: none; /* block */
+        
+    }
+
+    #startBTN {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 80%;
+        height: 40%;
+        background-color: lightgray;
+        cursor: pointer;
+        user-select: none;
+        
+    }    
+    
+    #flowerTop {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 10%;
+        height: 10%;
+        background-color: hotpink;
+        border-radius: 50%;
+        
+    }
+    
+    #wateringCan {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        width: 10%;
+        height: 10%;
+        background-color: blue;
+        
+    }    
+    
+</style>    
+
+<body> 
+    
+<div id="startScreen">
+    <div id="startBTN"> </div>
+</div>    
+
+<div id="gameScreen"> 
+    <div id="flowerTop"></div>
+    <div id="wateringCan"></div>
+</div>    
+
+<div id="endScreen"> </div>    
+
+<script>
+
+    var myStartScreen;
+    myStartScreen = 
+    document.querySelector("#startScreen");
+    
+    var myGameScreen;
+    myGameScreen = 
+    document.querySelector("#gameScreen");
+    
+    var myStartBTN;
+    myStartBTN = 
+    document.querySelector("#startBTN");
+    
+    myStartBTN.innerHTML = "START";
+    myStartBTN.style.textAlign = "center";
+    myStartBTN.style.fontSize = "3em";
+    
+    myStartBTN.addEventListener("click", hideStartShowGame, false)
+    
+    function hideStartShowGame() {
+    myStartScreen.style.display= "none";
+    myGameScreen.style.display= "block";
+    }
+    
+    var myWateringCan;
+    myWateringCan = 
+    document.querySelector("#wateringCan");
+    
+    var myFlowerTop;
+    myFlowerTop = document.querySelector("#flowerTop");
+    
+    var postionY = 0;
+    
+    myWateringCan.addEventListener("click", growFlower, click);
+    
+    function growFlower() {
+        postionY = postionY +20;
+        myFlowerTop.style.transform = "translateY(+"20"+%)";
+        
+    }
+    
+</script>    
+    
+</body>
+
+</html>
