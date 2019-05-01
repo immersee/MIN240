@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  
+    <title>Ralenkotter - Prototype</title>
+  </head>
+    
+<style>
+
+    #rect1 {
+        position: absolute;
+        background-color: gold;
+        z-index: 1;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        height: 25vh;
+        border: 0;
+        text-align: center;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+
+    }
+    
+    #lotA {
+        position: absolute;
+        background-color: gold;
+        z-index: 1;
+        top: 25vh;
+        left: 0vw;
+        width: 33.3%;
+        height: 50vh;
+        border: 0;
+        text-align: center;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+        border: 3px solid white;
+    }    
+    
+    #lotB {
+        position: absolute;
+        background-color: black;
+        z-index: 1;
+        top: 25vh;
+        left: 33.3vw;
+        width: 33.3%;
+        height: 50vh;
+        border: 0;
+        text-align: center;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+        border: 3px solid white;
+        color: white;
+    }
+    
+    #lotC {
+        position: absolute;
+        background-color: gold;
+        z-index: 1;
+        top: 25vh;
+        left: 66.3vw;
+        width: 33.3%;
+        height: 50vh;
+        border: 0;
+        text-align: center;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+        border: 3px solid white;
+    }    
+    
+    #rect2 {
+        position: absolute;
+        background-color: black;
+        z-index: 1;
+        top: 75vh;
+        left: 0vw;
+        width: 100%;
+        height: 50vh;
+        border: 0;
+        text-align: left;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+        color: white;
+    }
+    
+    #a {
+        position: absolute;
+        top: 23%;
+        left: 50%;
+        cursor: pointer;
+    }
+    
+    #b {
+        position: absolute;
+        top: 23%;
+        left: 50%;
+        cursor: pointer;
+        
+        /*background-image: url("https://github.com/immersee/MIN240/blob/master/lotB.jpg?raw=true");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 27vmin;
+        width: 48vmin;
+        top: 23%;
+        left: 50%;*/
+    }
+    
+    #c {
+        position: absolute;
+        top: 23%;
+        left: 50%;
+        cursor: pointer;
+        
+        /*background-image: url("https://github.com/immersee/MIN240/blob/master/lotC.jpg?raw=true");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 27vmin;
+        width: 48vmin;
+        top: 23%;
+        left: 50%;*/
+    }    
+    
+    #rect3 {
+        position: absolute;
+        background-color: gold;
+        z-index: 1;
+        top: 125vh;
+        left: 0vw;
+        width: 100%;
+        height: 50vh;
+        border: 0;
+        text-align: left;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+    }     
+    
+    #rect4 {
+        position: absolute;
+        background-color: black;
+        z-index: 1;
+        top: 175vh;
+        left: 0vw;
+        width: 100%;
+        height: 50vh;
+        border: 0;
+        text-align: left;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+        color: white;
+    }
+    
+    #rect5 {
+        position: absolute;
+        background-color: gold;
+        z-index: 1;
+        top: 225vh;
+        left: 0vw;
+        width: 100%;
+        height: 50vh;
+        border: 0;
+        text-align: center;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+    }
+    
+    #rect6 {
+        position: absolute;
+        background-color: black;
+        z-index: 1;
+        top: 275vh;
+        left: 0vw;
+        width: 100%;
+        height: 50vh;
+        border: 0;
+        text-align: center;
+        display: grid;
+        align-content: center;
+        font-family: 'Merriweather', serif;
+        color: white;
+    }    
+    
+</style>    
+    
+  <body>
+      <div id="rect1">
+      <h1>Pocket Parking</h1>
+          <h4>Select the Lot you would like to reserve a spot in below</h4>
+      </div>
+      
+    <div id="lots">
+      <div id="lotA">
+          <a href="#rect2">Lot A</a>
+      </div>
+
+      <div id="lotB">
+          <a href="#rect3">Lot B</a>
+      </div>
+      
+      <div id="lotC">
+          <a href="#rect4">Lot C</a>
+      </div>      
+      </div>  
+        
+      <div id="rect2">
+      <h1>Lot A</h1>
+          <p>Select an available parking space:</p>
+          
+          <div id="a">
+          <a href="#rect5"> <img src="https://github.com/immersee/MIN240/blob/master/lotA.jpg?raw=true" alt="Lot A" width="304vmin" height="171vmin"></a>
+          </div>    
+          
+      </div>
+      
+      <div id="rect3">
+      <h1>Lot B</h1>
+          <p>Select an available parking space:</p>
+          <div id="b">
+          
+            <a href="#rect5"> <img src="https://github.com/immersee/MIN240/blob/master/lotB.jpg?raw=true" alt="Lot B" width="304vmin" height="171vmin"></a>
+
+          </div>
+      </div>
+      
+      <div id="rect4">
+      <h1>Lot C</h1>
+          <p>Select an available parking space:</p>
+          <div id="c">
+          
+          <a href="#rect5"> <img src="https://github.com/immersee/MIN240/blob/master/lotC.jpg?raw=true" alt="Lot C" width="304vmin" height="171vmin"></a>
+          
+          </div>
+      </div>
+      
+      <div id="rect5">
+          <form>
+            Lot (A, B, or C):
+            <br>
+            <input type="text" name="lot">
+            <br>
+            <br>
+            Space Number (1-12):
+            <br>
+            <input type="text" name="space">
+            <br>
+            <br>
+            <input type="submit" value="Reserve!">
+          </form> 
+          
+      </div>
+      
+      <div id="rect6">
+      Thank you for using Pocket Parking.
+      </div>
+      
+  </body>
+</html>
